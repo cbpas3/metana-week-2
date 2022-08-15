@@ -22,7 +22,8 @@ contract Sanctions is ERC20 {
     {
         super._beforeTokenTransfer(from, to, amount);
 
-        require(! blacklist[msg.sender] && ! blacklist[to], "CysToken: You or the address you are sending to are or is blacklisted");
+        require(! blacklist[msg.sender] && ! blacklist[to], 
+        "CysToken: You or the address you are sending to are or is blacklisted");
     }
 
 
