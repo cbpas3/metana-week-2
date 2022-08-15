@@ -1,13 +1,21 @@
-# Sample Hardhat Project
+# Metana Week 2 "FIXED" Assignments Compilation
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Slither, prettier and solhint we're used to clean up the code of these assignments.
 
-Try running some of the following tasks:
+## Original Code:
 
-```shell
-npx hardhat help
-npx hardhat test
-GAS_REPORT=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+### God Mode
+
+https://github.com/cbpas3/erc20_god_mode
+
+## Sanctions
+
+https://github.com/cbpas3/ERC20withSanctions
+
+## Token Sale
+
+https://github.com/cbpas3/tokenSale
+
+## Refund
+
+https://github.com/cbpas3/refund
