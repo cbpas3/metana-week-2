@@ -19,7 +19,7 @@ contract Refund is ERC20Capped{
     function mint() external payable {
         require(msg.value == 1*10**decimals(), "CysToken: Wrong amount of Eth sent.");
         if(totalSupply() == cap()){
-            require(balanceOf(address(this))>= 1000*10**decimals(), "CysToken: Insuffienct tokens in contract.");
+            require(balanceOf(address(this))>= 1000*10**decimals(), "CysToken: Insufficient tokens in contract.");
             _transfer( address(this) ,msg.sender,1000 * 10**decimals());
         } else{
             _mint(msg.sender,1000*10**decimals());
@@ -32,7 +32,7 @@ contract Refund is ERC20Capped{
 
     function refund() external payable {
         require(address(this).balance >= 5*10**(decimals()-1), "CysToken: Not enough ether to pay.");
-        require(balanceOf(msg.sender) >= 1000 * 10**decimals());
+        require(balanceOf(msg.sender) >= 1000 * 10**decimals(), "CysToken: Not enough tokens.");
         _transfer(msg.sender, address(this) ,1000 * 10**decimals());
         payable(msg.sender).transfer(5*10**(decimals()-1));
     }
